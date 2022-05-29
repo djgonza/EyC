@@ -1,0 +1,15 @@
+<h2>Buscar entidad</h2>
+
+<form [formGroup]="buscadorEntidadesForm" (ngSubmit)="buscar()">
+    <mat-form-field appearance="fill">
+        <mat-label>Denominación</mat-label>
+        <input formControlName="denominacion" matInput placeholder="Denominación" value="">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Nif</mat-label>
+        <input formControlName="nif" matInput placeholder="Nif" value="">
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" type="submit">Buscar</button>
+</form>

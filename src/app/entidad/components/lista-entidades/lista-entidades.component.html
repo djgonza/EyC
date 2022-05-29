@@ -1,0 +1,18 @@
+<table mat-table [dataSource]="entidades" class="mat-elevation-z8">
+    <ng-container matColumnDef="Denominacion">
+        <th mat-header-cell *matHeaderCellDef>Denominación</th>
+        <td mat-cell *matCellDef="let element"> {{element.Denominacion}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Nif">
+        <th mat-header-cell *matHeaderCellDef> Nif </th>
+        <td mat-cell *matCellDef="let element"> {{element.Nif}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row 
+        *matRowDef="let row; columns: displayedColumns;" 
+        [ngStyle]="{'background-color': entidadSeleccionada?.Id === row.Id && 'aliceblue'}"
+        (click)="entidadRowClick(row)"
+    ></tr>
+</table>

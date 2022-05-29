@@ -1,0 +1,14 @@
+<table mat-table [dataSource]="centros" class="mat-elevation-z8">
+    <ng-container matColumnDef="Denominacion">
+        <th mat-header-cell *matHeaderCellDef>Denominación</th>
+        <td mat-cell *matCellDef="let element"> {{element.Denominacion}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Nima">
+        <th mat-header-cell *matHeaderCellDef> Nima </th>
+        <td mat-cell *matCellDef="let element"> {{element.Nima}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
